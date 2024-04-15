@@ -20,7 +20,7 @@ body {
     width: 320px;
     height: 420px;
     z-index: 2;
-    transition: transform 1s ease; /* Smooth transition for moving the image container */
+    transition: transform 1s ease;
 }
 
 #card:hover .image {
@@ -31,12 +31,12 @@ body {
 
 .image img {
     width: 240px;
-    transition: transform 1s ease; /* Smooth transition for rotating back */
-    animation-fill-mode: forwards; /* Make sure the image stays in the final state after animation */
+    transition: transform 1s ease; 
+    animation-fill-mode: forwards; 
 }
 
 #card:hover .image img {
-    animation: rotation 1s forwards; /* Apply rotation animation on hover */
+    animation: rotation 1s forwards; 
 }
 
 #review {
@@ -47,7 +47,7 @@ body {
     width: 320px;
     height: 420px;
     border-radius: 20px;
-    transition: transform 1s ease; /* Smooth transition for moving the review panel */
+    transition: transform 1s ease; 
 }
 
 #card:hover #review {
