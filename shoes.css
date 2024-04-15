@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgb(77, 127, 235) 50%, white  100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 20px;
+    width: 320px;
+    height: 420px;
+    z-index: 2;
+    transition: transform 1s ease; /* Smooth transition for moving the image container */
+}
+
+#card:hover .image {
+    transform: translateX(-160px);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.image img {
+    width: 240px;
+    transition: transform 1s ease; /* Smooth transition for rotating back */
+    animation-fill-mode: forwards; /* Make sure the image stays in the final state after animation */
+}
+
+#card:hover .image img {
+    animation: rotation 1s forwards; /* Apply rotation animation on hover */
+}
+
+#review {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37, 99, 235);
+    z-index: 1;
+    width: 320px;
+    height: 420px;
+    border-radius: 20px;
+    transition: transform 1s ease; /* Smooth transition for moving the review panel */
+}
+
+#card:hover #review {
+    transform: translateX(160px);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#price {
+    display: flex;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-45deg);
+    }
+}
